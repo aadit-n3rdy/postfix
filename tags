@@ -1,0 +1,64 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/n3rdy/dev/c/postfix/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20220828.0/
+$(OBJ)	Makefile	/^$(OBJ): obj\/%.o: src\/%.c$/;"	t
+OBJ	Makefile	/^OBJ := $(patsubst src\/%.c,obj\/%.o,$(SRC))$/;"	m
+POSTFIX_PARSER_H	include/parser.h	/^#define POSTFIX_PARSER_H$/;"	d
+SRC	Makefile	/^SRC := $(wildcard src\/*.c)$/;"	m
+STRING_BUILDER_BLOCK_SIZE	include/string_builder.h	/^	#define STRING_BUILDER_BLOCK_SIZE /;"	d
+STRING_BUILDER_H	include/string_builder.h	/^#define STRING_BUILDER_H$/;"	d
+STRING_STREAM_H	include/string_stream.h	/^#define STRING_STREAM_H$/;"	d
+TEST_SRC	Makefile	/^TEST_SRC := $(wildcard test\/*.c)$/;"	m
+TREE_H	tree/tree.h	/^#define TREE_H$/;"	d
+all	Makefile	/^all: bin\/postfix$/;"	t
+bal	tree/tree.h	/^    int8_t bal;$/;"	m	struct:tree_header	typeref:typename:int8_t
+bin/postfix	Makefile	/^bin\/postfix: $(OBJ)$/;"	t
+bin/test	Makefile	/^bin\/test: $(TEST_SRC) $(filter-out obj\/main.o, $(OBJ))$/;"	t
+get_height	tree/tree.c	/^static inline uint32_t get_height(jem_tree_t tree) {$/;"	f	typeref:typename:uint32_t	file:
+get_id	tree/tree.c	/^static inline uint32_t get_id(jem_tree_t tree) {$/;"	f	typeref:typename:uint32_t	file:
+h	tree/tree.h	/^    uint32_t h;$/;"	m	struct:tree_header	typeref:typename:uint32_t
+id	tree/tree.h	/^    uint32_t id;$/;"	m	struct:tree_header	typeref:typename:uint32_t
+index	include/string_stream.h	/^	size_t index;$/;"	m	struct:string_stream	typeref:typename:size_t
+internal_get	tree/tree.c	/^static jem_tree_t internal_get(jem_tree_t tree, uint32_t id) {$/;"	f	typeref:typename:jem_tree_t	file:
+jem_tree_balance	tree/tree.c	/^static jem_tree_t jem_tree_balance(jem_tree_t tree) {$/;"	f	typeref:typename:jem_tree_t	file:
+jem_tree_get	tree/tree.c	/^void *jem_tree_get(jem_tree_t tree, uint32_t id, size_t offset) {$/;"	f	typeref:typename:void *
+jem_tree_insert	tree/tree.c	/^jem_tree_t jem_tree_insert(jem_tree_t tree, struct jem_tree_header *node) {$/;"	f	typeref:typename:jem_tree_t
+jem_tree_print_debug	tree/tree.c	/^void jem_tree_print_debug(jem_tree_t tree) {$/;"	f	typeref:typename:void
+jem_tree_remove	tree/tree.c	/^jem_tree_t jem_tree_remove(jem_tree_t tree, uint32_t id) {$/;"	f	typeref:typename:jem_tree_t
+left	tree/tree.h	/^    struct g;tree_header *left;$/;"	m	struct:tree_header	typeref:typename:tree_header *
+len	include/string_builder.h	/^	size_t len;$/;"	m	struct:string_builder	typeref:typename:size_t
+main	src/main.c	/^int main(int argc, char** argv) {$/;"	f	typeref:typename:int
+main	test/test.c	/^int main() {$/;"	f	typeref:typename:int
+max	include/string_builder.h	/^	size_t max;$/;"	m	struct:string_builder	typeref:typename:size_t
+max	tree/tree.c	/^static inline uint32_t max(uint32_t h1, uint32_t h2) {$/;"	f	typeref:typename:uint32_t	file:
+obj/%.o	Makefile	/^$(OBJ): obj\/%.o: src\/%.c$/;"	t
+parse	src/parser.c	/^int parse(char* in, char* out) {$/;"	f	typeref:typename:int
+parse_expr	src/parser.c	/^int parse_expr(string_stream_t in, string_builder_t out) {$/;"	f	typeref:typename:int
+parse_fac	src/parser.c	/^int parse_fac(string_stream_t in, string_builder_t out) {$/;"	f	typeref:typename:int
+parse_term	src/parser.c	/^int parse_term(string_stream_t in, string_builder_t out) {$/;"	f	typeref:typename:int
+print_internal	tree/tree.c	/^static void print_internal(jem_tree_t tree, int offset) {$/;"	f	typeref:typename:void	file:
+raw	include/string_builder.h	/^	struct sb_node *raw;$/;"	m	struct:string_builder	typeref:struct:sb_node *
+raw	include/string_stream.h	/^	char* raw;$/;"	m	struct:string_stream	typeref:typename:char *
+right	tree/tree.h	/^    struct g;tree_header *right;$/;"	m	struct:tree_header	typeref:typename:tree_header *
+string_builder	include/string_builder.h	/^struct string_builder {$/;"	s
+string_builder_append	src/string_builder.c	/^int string_builder_append(string_builder_t sb, char c) {$/;"	f	typeref:typename:int
+string_builder_get	src/string_builder.c	/^int string_builder_get(string_builder_t sb, char *out) {$/;"	f	typeref:typename:int
+string_builder_new	src/string_builder.c	/^string_builder_t string_builder_new() {$/;"	f	typeref:typename:string_builder_t
+string_builder_t	include/string_builder.h	/^typedef struct string_builder* string_builder_t;$/;"	t	typeref:struct:string_builder *
+string_stream	include/string_stream.h	/^struct string_stream {$/;"	s
+string_stream_free	src/string_stream.c	/^void string_stream_free(string_stream_t ss) {$/;"	f	typeref:typename:void
+string_stream_get	src/string_stream.c	/^char string_stream_get(string_stream_t ss) {$/;"	f	typeref:typename:char
+string_stream_new	src/string_stream.c	/^string_stream_t string_stream_new(char *str) {$/;"	f	typeref:typename:string_stream_t
+string_stream_t	include/string_stream.h	/^typedef struct string_stream* string_stream_t;$/;"	t	typeref:struct:string_stream *
+test	Makefile	/^test: bin\/test$/;"	t
+tree_header	tree/tree.h	/^struct tree_header {$/;"	s
+tree_t	tree/tree.h	/^typedef struct g;tree_header* tree_t;$/;"	v	typeref:typename:tree_header *
+update_height_bal	tree/tree.c	/^static void update_height_bal(jem_tree_t tree) {$/;"	f	typeref:typename:void	file:
