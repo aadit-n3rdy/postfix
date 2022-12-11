@@ -3,6 +3,10 @@
 
 #include <stdlib.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 struct string_stream {
 	char* raw;
 	size_t index;
@@ -17,5 +21,9 @@ char string_stream_get(string_stream_t ss);
 char string_stream_peek(string_stream_t ss);
 
 void string_stream_free(string_stream_t ss);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

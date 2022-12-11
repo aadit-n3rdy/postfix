@@ -7,6 +7,10 @@
 	#define STRING_BUILDER_BLOCK_SIZE 32
 #endif
 
+#ifdef __cplusplus 
+extern "C" {
+#endif
+
 struct string_builder {
 	char *raw;
 	size_t len;
@@ -22,5 +26,9 @@ int string_builder_append(string_builder_t sb, char c);
 int string_builder_get(string_builder_t sb, char* out);
 
 void string_builder_free(string_builder_t sb);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -29,6 +29,7 @@ int string_builder_append(string_builder_t sb, char c) {
 	sb->raw[sb->len] = c;
 	sb->raw[sb->len+1] = '\0';
 	sb->len++;
+	return 0;
 }
 
 int string_builder_get(string_builder_t sb, char *out) {

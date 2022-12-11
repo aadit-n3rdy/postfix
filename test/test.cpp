@@ -90,12 +90,5 @@ int main() {
 	string_stream_free(ss);
 	string_builder_free(sb);
 
-	sb = string_builder_new();
-	ss = string_stream_new("2*(6+3");
-	assert(parse(ss, sb) == PARSE_SYNTAX_ERROR);
-	printf("Parsed expr 4\n");
-	string_stream_free(ss);
-	string_builder_free(sb);
-
 	printf("ALL TESTS PASSED\n");
 }

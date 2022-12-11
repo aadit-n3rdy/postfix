@@ -1,8 +1,8 @@
 
 // Program to convert an infix expression into postfix (with only single digit numbers)
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
 #include "parser.h"
 
@@ -13,8 +13,8 @@ int main(int argc, char** argv) {
 	if (argc > 1) {
 		in = argv[1];
 	} else {
-		in = malloc(32);
-		scanf("%s", in);
+		in = (char*)std::malloc(32);
+		std::scanf("%s", in);
 	}
 
 	// [KADIR] It is always best practice to construct the output
@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 	// of code execution.
 	char out[32];
 	parse(in, out);
-	printf("%s\n", out);
+	std::printf("%s\n", out);
 	if (argc <= 1)
-		free(in);
+		std::free(in);
 }
