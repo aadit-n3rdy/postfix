@@ -12,13 +12,15 @@ int parse_expr(string_stream_t in, string_builder_t out) {
 	parse_term(in, out);
 	char c;
 	while (1) {
-		c = string_stream_get(in);
+		c = string_stream_peek(in);
 		switch(c) {
 			case '-':
+				string_stream_get(in);
 				parse_term(in, out);
 				string_builder_append(out, '-');
 				continue;
 			case '+':
+				string_stream_get(in);
 				parse_term(in, out);
 				string_builder_append(out, '+');
 				continue;
@@ -72,14 +74,22 @@ int parse_term(string_stream_t in, string_builder_t out) {
 // for you to investigate. But these MUST be foundational
 // traits which will make you efficient with development.
 int parse_fac(string_stream_t in, string_builder_t out) {
-	char c  = string_stream_get(in);
+	char c  = string_stream_peek(in);
 	int ret = 0;
 	if (c >= '0' && c <= '9') {
+		string_stream_get(in);
 		string_builder_append(out, c);
 		ret = 0;
 	} else if (c == '(') {
+		string_stream_get(in);
 		parse_expr(in, out);
-		ret = (c == ')') ? 0 : PARSE_SYNTAX_ERROR;
+		c = string_stream_peek(in);
+		if (c == ')') {
+			ret = 0;
+			string_stream_get(in);
+		} else {
+			ret = PARSE_SYNTAX_ERROR;
+		}
             // [KADIR] Always work with specific error codes and allow the
             // functions to bubble up error details.
             // You can additionally have logging methods which will be used
